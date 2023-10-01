@@ -1,0 +1,13 @@
+local character = script.Parent
+
+local anim = script:WaitForChild("Animation")
+local humanoid = character:WaitForChild("Humanoid")
+
+local animation = humanoid:LoadAnimation(anim)
+
+local Players = game:GetService("Players") -- Your method of finding players to listen to
+local owner = Players:WaitForChild("ViliamOficial2") -- Your method of finding players to listen to
+
+owner.leaderstats.Stat:GetPropertyChangedSignal("Value"):Connect(function ()
+	animation:Play()
+end)

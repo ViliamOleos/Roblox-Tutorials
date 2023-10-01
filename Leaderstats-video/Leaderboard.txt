@@ -1,0 +1,20 @@
+local Players = game:WaitForChild("Players")
+
+local function createLeaderboard(player)
+	local stats = Instance.new("Folder")
+	stats.Name = "leaderstats"
+	local points = Instance.new("IntValue", stats)
+	points.Name = "Stat"
+	stats.Parent = player
+	--[[ You can add more stats!
+	
+	local 2ndStat = Instance.new("IntValue", stats)
+	2ndStat.Name = "Another Stat"
+	
+	local 3rdStat = Instance.new("IntValue", stats)
+	3rdStat.Name = "Yet Another Stat"
+	
+	]]
+end
+
+Players.PlayerAdded:Connect(createLeaderboard)

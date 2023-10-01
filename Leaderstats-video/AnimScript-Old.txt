@@ -1,0 +1,12 @@
+local character = script.Parent
+
+local anim = script:WaitForChild("Animation")
+local humanoid = character:WaitForChild("Humanoid")
+
+local animation = humanoid:LoadAnimation(anim)
+
+-- Write your behaviour here, for example:
+--[[
+wait(10)
+animation:Play()
+]]
